@@ -43,6 +43,8 @@
 
 //发送验证码(提交验证码)
 #define SENDCODE @"http://123.57.185.8/user/register"
+//找回密码发送验证码
+#define FORGETSENDCODE @"http://123.57.185.8/user/validate"
 //设置密码
 #define SETPASSWORD @"http://123.57.185.8/user/setPwd"
 //收货地址列表

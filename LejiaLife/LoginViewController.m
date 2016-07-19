@@ -117,7 +117,7 @@
     
 }
 -(void)Btn2Click{
-        if ([self validateMobile:self.phoneNumberTextField.text]==YES) {
+        if (self.phoneNumberTextField.text.length==11) {
             NSString *phoneNumber=self.phoneNumberTextField.text;
             NSString *passWord=self.passWordTextField.text;
             NSString *token=@"123";
@@ -164,8 +164,9 @@
                     }else if (self.notLoginBlock){
                         self.notLoginBlock();
                     }else{
-                        HomeViewController *home=[[HomeViewController alloc]init];
-                        [self.navigationController pushViewController:home animated:YES];
+//                        HomeViewController *home=[[HomeViewController alloc]init];
+//                        [self.navigationController pushViewController:home animated:YES];
+                        [self.navigationController popToRootViewControllerAnimated:YES];
                     }
                     
                 }else{

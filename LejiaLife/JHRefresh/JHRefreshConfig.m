@@ -43,12 +43,13 @@ NSString *const JHRefreshLastUpdateTimeFormat = @"yyyy-MM-dd HH:mm";
 {
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     NSDictionary *refreshDic = [userDefault objectForKey:JHRefreshConfigKey];
-    NSString *time = [[refreshDic objectForKey:JHRefreshLastUpdateTimeKey] objectForKey:[NSString stringWithFormat:@"%@_%d",JHRefreshLastUpdateTimeKey,ID]];
+    NSString *time = [[refreshDic objectForKey:JHRefreshLastUpdateTimeKey] objectForKey:[NSString stringWithFormat:@"%@_%ld",JHRefreshLastUpdateTimeKey,(long)ID]];
     
     if(!time)
     {
         return [[self class] nowTimeString];
     }
+    
     
     return time;
 }
@@ -66,7 +67,7 @@ NSString *const JHRefreshLastUpdateTimeFormat = @"yyyy-MM-dd HH:mm";
     {
         lastUpdateTimeDic = [NSMutableDictionary dictionary];
     }
-    [lastUpdateTimeDic setObject:[[self class] nowTimeString] forKey:[NSString stringWithFormat:@"%@_%d",JHRefreshLastUpdateTimeKey,ID]];
+    [lastUpdateTimeDic setObject:[[self class] nowTimeString] forKey:[NSString stringWithFormat:@"%@_%ld",JHRefreshLastUpdateTimeKey,(long)ID]];
     
     [userDefault setObject:refreshDic forKey:JHRefreshConfigKey];
     [userDefault synchronize];

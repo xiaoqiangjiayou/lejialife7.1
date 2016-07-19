@@ -110,7 +110,7 @@
     if (num<10)
     {
         UILabel *labelNum = [[UILabel alloc] initWithFrame:CGRectMake(0, 15, frameW, 28)];
-        labelNum.text = [NSString stringWithFormat:@"%ld",num];
+        labelNum.text = [NSString stringWithFormat:@"%ld",(long)num];
         labelNum.textColor = [UIColor blackColor];
         labelNum.textAlignment = NSTextAlignmentCenter;
         labelNum.font = kNumFont;

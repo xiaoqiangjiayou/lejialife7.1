@@ -271,7 +271,7 @@
 -(UIScrollView*)ScrollowView{
     if (_ScrollowView==nil) {
         _ScrollowView=[[UIScrollView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT-49-64)];
-        _ScrollowView.pagingEnabled = YES;
+        _ScrollowView.pagingEnabled = NO;
         _ScrollowView.showsHorizontalScrollIndicator=NO;
         _ScrollowView.bounces=NO;
         _ScrollowView.delegate=self;
@@ -358,7 +358,8 @@
     _animationLabel2.layer.cornerRadius=7.5;
     _animationLabel2.clipsToBounds=YES;
     _animationLabel2.backgroundColor=[UIColor colorWithRed:214.0/250.0 green:44.0/250.0 blue:44.0/250.0 alpha:1];
-    _animationLabel2.text=[NSString stringWithFormat:@"%ld",[[DBManager manager]readAllGoods].count ];
+    _animationLabel2.text=[NSString stringWithFormat:@"%ld",(unsigned long)[[DBManager manager]readAllGoods].count ];
+    
     _animationLabel2.textColor=[UIColor whiteColor];
     _animationLabel2.font=[UIFont systemFontOfSize:9];
     _animationLabel2.textAlignment=NSTextAlignmentCenter;

@@ -160,7 +160,7 @@
 -(void)cellRememberBtnClick:(UIButton*)sender{
     if (_isGoshoppingPush==YES) {
         [sender setBackgroundImage:[UIImage imageNamed:@"unchecked_icon"] forState:UIControlStateNormal];
-        NSLog(@"%ld",sender.tag);
+        NSLog(@"%ld",(long)sender.tag);
         [self.rememberArray addObject:self.datasouceArray[sender.tag-100].addressId];
         if (self.rememberArray.count==2) {
             self.OldId=[self.rememberArray objectAtIndex:0];
@@ -200,7 +200,7 @@
         
     }else{
         [sender setBackgroundImage:[UIImage imageNamed:@"unchecked_icon"] forState:UIControlStateNormal];
-        NSLog(@"%ld",sender.tag);
+        NSLog(@"%ld",(long)sender.tag);
         [self.rememberArray addObject:self.datasouceArray[sender.tag-100].addressId];
         if (self.rememberArray.count==2) {
             self.OldId=[self.rememberArray objectAtIndex:0];
@@ -263,7 +263,7 @@
     return UITableViewCellEditingStyleDelete ;
 }
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"取消选择了第%ld组 第%ld行",indexPath.section,indexPath.row);
+    NSLog(@"取消选择了第%ld组 第%ld行",(long)indexPath.section,(long)indexPath.row);
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

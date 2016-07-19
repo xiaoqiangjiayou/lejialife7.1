@@ -39,10 +39,10 @@
     _numberLabe.textColor=[UIColor colorWithRed:140.0/250.0 green:140.0/250.0 blue:140.0/250.0 alpha:1];
     //_numberLabe.text=@"数量：3件";
     [backGroundView addSubview:_numberLabe];
-    _priceLabel=[[UILabel alloc]initWithFrame:CGRectMake(300, 75, SCREEN_WIDTH-300, 13)];
+    _priceLabel=[[UILabel alloc]initWithFrame:CGRectMake(300, 75, SCREEN_WIDTH-300-20, 13)];
     _priceLabel.font=[UIFont systemFontOfSize:15.0];
     //    _priceLabel.textColor=[UIColor colorWithRed:214.0/250.0 green:44.0/250.0 blue:44.0/250.0 alpha:1];
-    _priceLabel.textAlignment=NSTextAlignmentLeft;
+    _priceLabel.textAlignment=NSTextAlignmentRight;
     //_priceLabel.text=@"￥68.00";
     [backGroundView addSubview:_priceLabel];
     UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(100, 139.5, SCREEN_WIDTH-100-20, 1.5)];

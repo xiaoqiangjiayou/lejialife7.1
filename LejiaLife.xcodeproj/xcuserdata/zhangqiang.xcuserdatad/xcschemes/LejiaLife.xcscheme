@@ -65,7 +65,7 @@
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
@@ -86,7 +86,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
-      customArchiveName = "&#x4e50;&#x207a;&#x751f;&#x6d3b;"
+      customArchiveName = "&#x4e50;+&#x751f;&#x6d3b;"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

@@ -36,8 +36,9 @@
     self.adressLabel.font=[UIFont systemFontOfSize:12];
     self.adressLabel.numberOfLines=0;
     [myView addSubview:self.adressLabel];
-    self.distanceLabel=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH-60, 60, 100, 13)];
+    self.distanceLabel=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH-100, 80, 100-20, 13)];
     self.distanceLabel.font=[UIFont systemFontOfSize:10];
+    self.distanceLabel.textAlignment=NSTextAlignmentRight;
     self.distanceLabel.textColor=[UIColor colorWithRed:214.0/250.0 green:44.0/250.0 blue:44.0/250.0 alpha:1];
     [myView addSubview:self.distanceLabel];
     UILabel *lineLabel=[[UILabel alloc]initWithFrame:CGRectMake(140, 92, SCREEN_WIDTH-140, 1)];

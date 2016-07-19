@@ -146,7 +146,7 @@
     
     self.btn1.frame=CGRectMake(30, 72.5, 30, 69);
     [self.btn1 setImage:[UIImage imageNamed:@"home-furnishing_icon2"] forState:UIControlStateNormal];
-    self.label1=[[UILabel alloc]initWithFrame:CGRectMake(0, 30, 30, 18)];
+    self.label1=[[UILabel alloc]initWithFrame:CGRectMake(0, 30, 40, 18)];
     self.label1.text=@"家居";
     self.label1.textColor=[UIColor redColor];
     self.label1.font=[UIFont systemFontOfSize:15];
@@ -160,7 +160,7 @@
     self.btn2.frame=CGRectMake((SCREEN_WIDTH-180)/3+60, 72.5, 30, 69);
     [self.btn2 setImage:[UIImage imageNamed:@"snacks_icon"] forState:UIControlStateNormal];
     self.btn2.imageEdgeInsets=UIEdgeInsetsMake(0, 0, 39, 0);
-    self.label2=[[UILabel alloc]initWithFrame:CGRectMake(0, 30, 30, 18)];
+    self.label2=[[UILabel alloc]initWithFrame:CGRectMake(0, 30, 40, 18)];
     self.label2.text=@"零食";
     self.label2.font=[UIFont systemFontOfSize:15];
     self.label2.textColor=[UIColor whiteColor];
@@ -171,7 +171,7 @@
     self.btn3.frame=CGRectMake(((SCREEN_WIDTH-180)/3)*2+90, 72.5, 30, 69);
     [self.btn3 setImage:[UIImage imageNamed:@"digital first_2x"] forState:UIControlStateNormal];
     self.btn3.imageEdgeInsets=UIEdgeInsetsMake(0, 0, 39, 0);
-    self.label3=[[UILabel alloc]initWithFrame:CGRectMake(0, 30, 30, 18)];
+    self.label3=[[UILabel alloc]initWithFrame:CGRectMake(0, 30, 40, 18)];
     self.label3.text=@"数码";
     self.label3.font=[UIFont systemFontOfSize:15];
     self.label3.textColor=[UIColor whiteColor];
@@ -180,7 +180,7 @@
     self.btn4.frame=CGRectMake(((SCREEN_WIDTH-180)/3)*3+120, 72.5, 30, 69);
     [self.btn4 setImage:[UIImage imageNamed:@"outdoors first_"] forState:UIControlStateNormal];
     self.btn4.imageEdgeInsets=UIEdgeInsetsMake(0, 0, 39, 0);
-    self.label4=[[UILabel alloc]initWithFrame:CGRectMake(0, 30, 30, 18)];
+    self.label4=[[UILabel alloc]initWithFrame:CGRectMake(0, 30, 40, 18)];
     self.label4.text=@"户外";
     self.label4.font=[UIFont systemFontOfSize:15];
     self.label4.textColor=[UIColor whiteColor];
@@ -690,11 +690,11 @@
     }
     
     /*-----------------------------动画-------------------------*/
-//    CATransition *transition = [CATransition animation];
-//    transition.duration = 1;
-//    transition.delegate = self;
-//    transition.type = @"rippleEffect";
-//    [self.navigationController.view.layer addAnimation:transition forKey:nil];
+    CATransition *transition = [CATransition animation];
+    transition.duration = 1;
+    transition.delegate = self;
+    transition.type = @"rippleEffect";
+    [self.navigationController.view.layer addAnimation:transition forKey:nil];
 }
 //*********************************转场*********************
 - (void)viewWillAppear:(BOOL)animated

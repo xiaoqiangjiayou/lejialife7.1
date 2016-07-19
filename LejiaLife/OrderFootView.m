@@ -35,7 +35,7 @@
     _payBtn.layer.cornerRadius=3;
     _payBtn.layer.borderColor=[UIColor colorWithRed:214.0/250.0 green:44.0/250.0 blue:44.0/250.0 alpha:1].CGColor;
     [self.contentView addSubview:_payBtn];
-    _envelopeLabe=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2+20, 20, SCREEN_WIDTH/2-20, 10)];
+    _envelopeLabe=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2+20, 20, SCREEN_WIDTH/2-40, 10)];
     _envelopeLabe.font=[UIFont systemFontOfSize:9];
     _envelopeLabe.textColor=[UIColor blackColor];
     _envelopeLabe.textAlignment=NSTextAlignmentRight;

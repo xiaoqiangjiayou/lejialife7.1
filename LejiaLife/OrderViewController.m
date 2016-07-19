@@ -179,7 +179,7 @@
     return nil;
 }
 -(void)cancleBtnClick:(UIButton *)sender{
-    NSDictionary *dic=@{@"orderId":[NSString stringWithFormat:@"%ld",sender.tag]};
+    NSDictionary *dic=@{@"orderId":[NSString stringWithFormat:@"%ld",(long)sender.tag]};
     [[NetDataEngin sharedInstance]requestHomeParamter:dic Atpage:nil WithURL:ORDERCANCLE success:^(id responsData) {
         [self fetchData];
         [MBHelper showHUDViewWithTextForFooterView:@"订单取消成功"withHUDColor:[UIColor colorWithRed:0.0/255.0 green:0.0/255.0 blue:0.0/255.0 alpha:0.36]withDur:1.0];
@@ -189,7 +189,7 @@
     
 }
 -(void)payBtnClick:(UIButton *)sender{
-    NSDictionary *sendDic=@{@"token":[[NSUserDefaults standardUserDefaults] objectForKey:@"LoginToken"],@"orderId":[NSString stringWithFormat:@"%ld",sender.tag]};
+    NSDictionary *sendDic=@{@"token":[[NSUserDefaults standardUserDefaults] objectForKey:@"LoginToken"],@"orderId":[NSString stringWithFormat:@"%ld",(long)sender.tag]};
     [[NetDataEngin sharedInstance]creatOrderParamter:sendDic WithURL:ORDERCREATORDER success:^(id responsData){
         NSDictionary *responsDatadic=responsData;
         NSInteger status=[responsDatadic[@"status"] integerValue];

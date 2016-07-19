@@ -175,7 +175,7 @@
 -(void)commitBtnClick{
     if (self.textField.text.length==6) {
         NSDictionary *senddic=@{@"phoneNumber":self.phoneNumber,@"code":self.textField.text};
-        [[NetDataEngin sharedInstance]requestHomeParamter: senddic Atpage:nil WithURL:SENDCODE success:^(id responsData) {
+        [[NetDataEngin sharedInstance]requestHomeParamter: senddic Atpage:nil WithURL:FORGETSENDCODE success:^(id responsData) {
             NSDictionary *dic=responsData;
             NSInteger status=[dic[@"status"] integerValue];
             if (status==200) {

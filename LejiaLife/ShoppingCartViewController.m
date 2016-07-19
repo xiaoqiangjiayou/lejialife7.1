@@ -260,10 +260,12 @@
     
     return self.datasouceArray.count;
 }
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+-(CGFloat)tableView:(UITableView *)tableView
+            heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 137;
 }
--(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+-(UITableViewCell*)tableView:(UITableView *)tableView
+       cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ShoppingCartTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"xxx" ];
     if (cell==nil) {
         cell=[[ShoppingCartTableViewCell alloc]initWithIndexPath:indexPath];
@@ -424,7 +426,7 @@
     return UITableViewCellEditingStyleDelete ;
 }
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"取消选择了第%ld组 第%ld行",indexPath.section,indexPath.row);
+    NSLog(@"取消选择了第%ld组 第%ld行",(long)indexPath.section,(long)indexPath.row);
 }
 
 - (void)didReceiveMemoryWarning {
